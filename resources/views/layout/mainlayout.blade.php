@@ -3,7 +3,7 @@
   <head>
 
     {{-- cart --}}
-      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
@@ -16,14 +16,14 @@
           ]);
   
           var options = {
-            title: 'My Daily Activities'
+            title: 'Data Pemebelian'
           };
   
           var chart = new google.visualization.PieChart(document.getElementById('piechart'));
   
           chart.draw(data, options);
         }
-      </script>
+      </script> -->
     {{-- end chart --}}
     
     <meta charset="utf-8">

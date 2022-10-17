@@ -24,8 +24,8 @@ Route::post('/', [LoginController::class, 'ceklogin']);
 
 
 
-Route::get('/home', [HomeController::class, 'index']);
-Route::get('/mainlayout', [mainlayoutController::class, 'index']);
+Route::get('/home', [datalController::class, 'pie']);
+// Route::get('/mainlayout', [mainlayoutController::class, 'index']);
 Route::get('/add', [AddController::class, 'index']);
 Route::post('/add', [AddController::class, 'tambah']);
 Route::get('/list', [datalcontroller::class, 'index']);

@@ -17,12 +17,13 @@ class datalcontroller extends Controller
         //     $hasil->whereBetween('tgl_pembelian',[$tgl1,$tgl2]);
         // }
         
-
+        
         return view('list',[
             "title" => "list",
             "data" => $hasil->get()
           
         ]);
+        
     }
 
     public function showdetail(datal $datadetail){
@@ -39,6 +40,21 @@ class datalcontroller extends Controller
     	return $pdf->download('export.pdf');
         
     }
+
+    public function pie(){
+ //$p =  datal::all();
+        $result = datal::all();
+        
+        foreach ($result as $val){
+            $data ="['".$val->nama_barang."',   ".$val->jumlah_barang."],";
+        }
+        $hasil = $data;
+        return view('home',compact('hasil'));
+    //         "title" => "home",
+    //         "data" =>  compact('hasil')
+            
+    //     ]);
+     }
 
 
 }
